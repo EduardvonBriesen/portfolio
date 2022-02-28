@@ -7,14 +7,6 @@ export const headData = {
   description: 'Welcome to my website', // e.g: Welcome to my website
 };
 
-// HERO DATA
-export const heroData = {
-  title: '',
-  name: 'Eduard von Briesen',
-  subtitle: '',
-  cta: '',
-};
-
 // ABOUT DATA
 export const aboutData = {
   img: '',
@@ -41,7 +33,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'e.v.briesen@gmail.com',
 };
 
 // FOOTER DATA
@@ -49,23 +41,18 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/eduard-von-briesen-5b750b1b5/',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/EduardvonBriesen',
+    },
+    {
+      id: nanoid(),
+      name: 'instagram',
+      url: 'https://www.instagram.com/eduardvonbriesen/',
     },
   ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
 };
