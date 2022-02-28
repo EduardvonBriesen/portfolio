@@ -1,3 +1,4 @@
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
@@ -9,6 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
+        // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '__dirname'.
         path: `${__dirname}/src/images/`,
       },
     },
@@ -16,6 +18,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
+        // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '__dirname'.
         path: `${__dirname}/src/pages/`,
       },
     },
