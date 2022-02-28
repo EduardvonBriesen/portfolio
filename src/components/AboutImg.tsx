@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 const AboutImg = ({ filename, alt }: any) => (
-  // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
   <StaticQuery
     query={graphql`
       query {
@@ -29,7 +28,6 @@ const AboutImg = ({ filename, alt }: any) => (
       if (!image) return null;
 
       const imageFixed = image.node.childImageSharp.fixed;
-      // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       return <Img className="rounded shadow-lg" alt={alt} fixed={imageFixed} />;
     }}
   />

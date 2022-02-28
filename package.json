@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -75,7 +75,7 @@
     }
   },
   "lint-staged": {
-    "*.+(js|jsx)": [
+    "*.+(ts|tsx)": [
       "eslint --fix",
       "git add"
     ],
