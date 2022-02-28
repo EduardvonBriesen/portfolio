@@ -5,6 +5,14 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   rules: {
     'import/no-extraneous-dependencies': 'off',
     'prettier/prettier': 'error',
@@ -14,6 +22,17 @@ module.exports = {
     'react/static-property-placement': 'off', // disable if necessary
     'react/jsx-props-no-spreading': 'off', // disable if necessary
     'react/require-default-props': 'off',
+    // Missing file extension "ts" for "../../src/services/Intercom"
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
   parser: 'babel-eslint',
 };
