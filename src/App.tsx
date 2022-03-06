@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
-// import About from './About/About';
-// import Projects from './Projects/Projects';
+// import About from './components/About';
+// import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -11,13 +11,13 @@ import { aboutData, projectsData, contactData, footerData } from './mock/data';
 
 function App() {
   const [about, setAbout] = useState({});
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<{ projects: any[] }>({ projects: [] });
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
     setAbout({ ...aboutData });
-    setProjects([...projectsData]);
+    setProjects({ projects: [...projectsData] });
     setContact({ ...contactData });
     setFooter({ ...footerData });
   }, []);

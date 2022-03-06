@@ -4,15 +4,17 @@ interface ContextProps {
   projects: any;
   footer: any;
   contact: any;
-  about: any; }
+  about: any;
+}
 
-  const defaultPortfolio = {
-    projects: null,
-    footer: null,
-    contact: null, 
-    about: null, }
+const defaultPortfolio = {
+  projects: null,
+  footer: null,
+  contact: null,
+  about: null,
+};
 
-const PortfolioContext = React.createContext<ContextProps>(default);
+const PortfolioContext = React.createContext<ContextProps>(defaultPortfolio);
 
 export const PortfolioProvider = PortfolioContext.Provider;
 export const PortfolioConsumer = PortfolioContext.Consumer;

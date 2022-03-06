@@ -35,8 +35,9 @@ export default () => {
           </Fade>
 
           <Fade bottom duration={1000} delay={1000} distance="30px">
-            <p className="hero-cta justify-content-center">
-              // TODO: Add a link to the home page
+            <p className="hero-cta justify-content-center">{
+            // TODO: Add a link to the home page
+          }
             </p>
           </Fade>
         </Container>

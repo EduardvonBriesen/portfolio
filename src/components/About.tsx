@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from './Title';
-import AboutImg from './AboutImg';
 import PortfolioContext from '../context/context';
+
+const Fade = require('react-reveal/Fade');
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { paragraphOne, paragraphTwo, paragraphThree, resume } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -29,9 +29,7 @@ const About = () => {
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
-              </div>
+              <div className="about-wrapper__image" />
             </Fade>
           </Col>
 

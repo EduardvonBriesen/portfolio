@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
+
+const Fade = require('react-reveal/Fade');
 
 const speed = 200;
 

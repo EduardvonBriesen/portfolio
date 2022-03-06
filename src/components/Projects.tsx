@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../context/context';
 import Title from './Title';
-import ProjectImg from './ProjectImg';
+
+const Fade = require('react-reveal/Fade');
+const Tilt = require('react-tilt');
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -28,7 +28,7 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project: any) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, info2, url, repo, id } = project;
 
             return (
               <Row key={id}>
@@ -99,9 +99,7 @@ const Projects = () => {
                             easing: 'cubic-bezier(.03,.98,.52,.99)',
                           }}
                         >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
-                          </div>
+                          <div data-tilt className="thumbnail rounded" />
                         </Tilt>
                       </a>
                     </div>
