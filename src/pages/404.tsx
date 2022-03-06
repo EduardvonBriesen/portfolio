@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { headData } from '../mock/data';
 import '../style/main.scss';
+
+const Fade = require('react-reveal/Fade');
 
 export default () => {
   const { lang } = headData;
@@ -36,9 +36,7 @@ export default () => {
 
           <Fade bottom duration={1000} delay={1000} distance="30px">
             <p className="hero-cta justify-content-center">
-              <Link className="cta-btn cta-btn--hero" to="/">
-                Go back
-              </Link>
+              // TODO: Add a link to the home page
             </p>
           </Fade>
         </Container>

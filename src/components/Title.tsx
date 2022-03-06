@@ -1,6 +1,7 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
+
+const Fade = require('react-reveal/Fade');
 
 const Title = ({ title }: any) => (
   <Fade bottom duration={1000} delay={300} distance="0px">
